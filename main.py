@@ -6,7 +6,7 @@ def set_file_creation_date(file_path):
     # Extract the date from the filename
     base_name = os.path.basename(file_path)
     date_str = base_name.split('.')[0]  # Assuming the date is before the first dot
-    date_format = "%Y%m%d"
+    date_format = "%Y%m%d %H%M%S"
     
     try:
         # Parse the date
@@ -21,6 +21,6 @@ def set_file_creation_date(file_path):
         print(f"Filename {base_name} does not match the format {date_format}")
 
 # Example usage
-file_path = '20230912_example.txt'
+file_path = '20170208 065102.mp4'
 set_file_creation_date(file_path)
 
