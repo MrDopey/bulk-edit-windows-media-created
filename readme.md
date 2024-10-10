@@ -1,12 +1,4 @@
-https://mkvtoolnix.download/downloads.html#ubuntu
-
-```shell
-// Add repo first
-
-apt-get update
-sudo apt install apt-transport-https mkvtoolnix mkvtoolnix-gui
-```
-
+Must run from windows commandline as administrator when installing pypiwin32
 
 ```shell
 py -m venv .venv
@@ -14,10 +6,10 @@ py -m venv .venv
 .venv\Scripts\activate.bat
 
 
-pip install setuptools 
+pip install -r requirements.txt
 
-pypiwin32 
-# Need to run as admin
+# If admin mode was missed, enter admin, and run
+# Ensure that it is actually installed
 python .venv/Scripts/pywin32_postinstall.py -install
 (.venv) c:\Sandbox\test>python .venv/Scripts/pywin32_postinstall.py -install
 Parsed arguments are: Namespace(install=True, remove=False, wait=None, silent=False, quiet=False, destination='c:\\Sandbox\\test\\.venv\\Lib\\site-packages')
@@ -33,6 +25,9 @@ Pythonwin has been registered in context menu
 Shortcut for Pythonwin created
 Shortcut to documentation created
 The pywin32 extensions were successfully installed.
+
+# To run
+py main.py
 ```
 
 
